@@ -1,0 +1,205 @@
+body, html {
+	background: url('images/background.png') repeat;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #2F4F4F;
+}
+
+.newappIcon {
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 2px;
+	max-width: 200px;
+}
+
+#message {
+	color: #ffffff;
+	text-align: center;
+	font-size: 3em;
+	font-family: Palatino Linotype;
+}
+
+table {
+	table-layout: fixed;
+	width: 1035px;
+	margin: 0 auto;
+	padding-top: 1%;	
+}
+
+th {
+	border-bottom: 1px solid #000;
+}
+
+th, td {
+	text-align: center;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+#tfheader {
+	text-align: right;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+#comeon  {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #2F4F4F;
+	padding-top: 10px;
+	padding-bottom: 1px;
+}
+
+.env-var {
+	text-align: right;
+	border-right: 1px solid #000;
+	width: 30%;
+}
+
+pre {
+	padding: 0;
+	margin: 0;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#tfnewsearch{
+  float:right;
+  padding-top:10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tftextinput{
+  margin: 0;
+  padding: 1px 15px;
+  font-family: Helvetica;
+  font-size:48px;
+  border:1px solid #cc1075; border-right:0px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.tfbutton {
+  margin: 0;
+  padding: 1px 15px;
+  font-family: Helvetica;
+  font-size:48px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 1px #000000;
+  background: #cc1075;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-right:1px solid #cc1075;
+}
+
+.tfbutton:hover {
+  text-decoration: none;
+  background: #007ead;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+
+/* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+  border: 0;
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 225px;					
+    height: 30px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: black;	
+	color: white;
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+.tabs-menu {
+    height: 35px;
+	margin: 0 auto;
+	width: 100%;
+	float: left;
+}
+
+.tabs-menu li {
+    height: 35px;
+    line-height: 30px;
+	margin-right: 10px;
+    float: left;
+    background-color: #cc1075;
+    border-left: 2px solid #cc1075;
+	border-right: 2px solid #cc1075;
+	border-top: 2px solid #cc1075;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.tabs-menu li.current {
+	border-bottom: 2px solid white;
+    position: relative;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.tabs-menu li a {
+    padding: 10px;
+    text-transform: uppercase;
+	font-size:20px;
+	font-family: sans-serif;
+    color: #fff;
+    text-decoration: none; 
+}
+
+.tabs-menu .current a {
+    color: #2F4F4F;
+}
+
+.tab {
+    border: 2px solid #cc1075;
+    margin: 0 auto;
+    width: auto;
+	background-color: #fff;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	float: left;
+}
+
+#tabs-container {
+	margin: 0 auto;
+	width: 1100px;
+}
+
+.tab-content {
+	margin: 0 auto;
+    width: 100%;
+    display: none;
+}
+
+#tab-1 {
+ display: block;   
+}
+
+ul
+{
+    list-style-type: none;
+	padding:0; 
+	margin:0;
+}

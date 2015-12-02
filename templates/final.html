@@ -1,0 +1,116 @@
+<!DOCT<!DOCTYPE html>
+<html>
+	<head>
+		<title>Twitter+Watson PsychoGraphics</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="static/stylesheets/style.css?nocache=" + (new Date()).getTime()" />
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="-1">
+		<script type="text/javascript">
+			function submit_la(){
+				var myDiv1 = document.getElementById("loadimage");
+				var myDiv2 = document.getElementById("normalimg");
+
+				myDiv1.style.display = "block";
+				myDiv2.style.display = "none";
+				d3.select("svg").remove();
+				setTimeout(show, 5000);  // 5 seconds
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="normalimg" align="center" style="display: block;">
+	
+			<script src="static/js/d3.v3.min.js"></script>
+			<script src="static/js/jquery-1.11.3.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					$(".tabs-menu a").click(function(event) {
+						event.preventDefault();
+						$(this).parent().addClass("current");
+						$(this).parent().siblings().removeClass("current");
+						var tab = $(this).attr("href");
+						$(".tab-content").not(tab).css("display", "none");
+						$(tab).fadeIn();
+					});
+				});
+			</script>
+			<table>
+				<tr>
+					<td id = "new" style="width: 100%;"><img src='static/images/head.png' width= 100%></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td style="width: 25%;"><img class = 'newappIcon' src='static/images/FCx2b.gif'></td>
+					<td style="width: 75%;">
+						<div id="tfheader">
+							<form id="tfnewsearch" action="/results" method="POST" onsubmit="submit_la()">
+								<input type="text" placeholder="Done! Go Again!" class="tftextinput" name="q" size="22" maxlength="120"><input type="submit" value="GO!" class="tfbutton">
+							</form>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<br/>
+			<div id="tabs-container">
+				<ul class="tabs-menu">
+					<li class="current"><a href="#tab-1">Results Summary</a></li>
+					<li><a href="#tab-2">Data Visualization</a></li>
+					<li><a href="#tab-3">Legend</a></li>
+				</ul>
+				<div class="tab">
+					<div id="tab-1" class="tab-content">
+						<table><tr><td><h1>Big 5 Personality Sketch for @{{twit}}</h1></td></tr></table>
+						<br>
+						<table>
+							<tr>
+								<td style="width:20%; padding-right: 2px;"><img src = 'static/images/agreeable.png' width= 150px height= 150px max-width></td>
+								<td style="width:20%; padding-right: 2px;"><img src = 'static/images/extraversion.png' width= 150px height= 150px></td>
+								<td style="width:20%; padding-right: 2px;"><img src = 'static/images/openness.png' width= 150px height= 150px></td>
+								<td style="width:20%; padding-right: 2px;"><img src = 'static/images/conscientiousness.png' width= 150px height= 150px></td>
+								<td style="width:20%; padding-right: 2px;"><img src = 'static/images/emotional.jpg' width= 150px height= 150px></td>
+							</tr>
+						</table>
+						<p></p>
+						<table>	
+							<tr id="comeon" style="margin-bottom: 30px;">
+								<td style="width:20%; padding-right: 2px;"><p><b>Agreeableness: <br>{{agreeable_val}}% Percentile</b></p></td>
+								<td style="width:20%; padding-right: 2px;"><p><b>Extroversion: <br>{{extraversion_val}}% Percentile</b></p></td>
+								<td style="width:20%; padding-right: 2px;"><p><b>Openness: <br>{{openness_val}}% Percentile</b></p></td>
+								<td style="width:20%; padding-right: 2px;"><p><b>Conscientiousness: <br>{{conscientious_val}}% Percentile</b></p></td>
+								<td style="width:20%; padding-right: 2px;"><p><b>Emotional Range: <br>{{emotional_val}}% Percentile</b></p></td>
+							</tr>
+						</table>
+						<br/>
+						<br/>
+					</div>
+					<div id="tab-2" class="tab-content">
+						<table><tr><td><h1>Big 5 Personality Sketch for @{{twit}} - Stacked Bar Chart</h1></td></tr></table>
+							<div id="body1"></div>
+							<br/>
+							<br/>
+					</div>
+					<div id="tab-3" class="tab-content">
+						<table><tr><td><h1>Big 5 Personality Sketch for @{{twit}} - Legend</h1></td></tr></table>
+						<table><tr><td><img src='static/images/pq0455.png' width=75%></td></tr></table>
+						<br/>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<br/>
+		</div>
+		<div id="loadimage" style="display: none; margin-top: 100px;">	
+			<table><tr><td><img src='static/images/post-54213-flapping-Twitter-bird-gif-imgu-UBf6.gif' width=60%></td></tr>
+				<tr>
+					<td><img src='static/images/loadingpage.gif' width=20%></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="static/js/d3-stacked-bar.js?nocache=" + (new Date()).getTime()"></script>
+</html>

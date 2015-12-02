@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Twitter+Watson PsychoGraphics</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="static/stylesheets/style.css?nocache=" + (new Date()).getTime()" />
+		<meta http-equiv="Expires" content="Sat, 26 Jul 1997 05:00:00 GMT">
+		<meta http-equiv="Pragma" content="no-cache">
+		<script type="text/javascript">
+			function submit_la(){
+				var myDiv1 = document.getElementById("loadimage");
+				var myDiv2 = document.getElementById("normalimg");
+
+				myDiv1.style.display = "block";
+				myDiv2.style.display = "none";
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="normalimg" style="display: block;">
+			<script src="static/js/d3.v3.min.js"></script>
+			<table>
+				<tr>
+					<td id = "new" style="width: 100%;"><img src='static/images/head.png' width= 100%></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td style="width: 25%;"><img class = 'newappIcon' src='static/images/FCx2b.gif'></td>
+					<td style="width: 75%;">
+						<div id="tfheader">
+							<form id="tfnewsearch" action="/results" method="POST" onsubmit="submit_la()">
+								<input type="text" placeholder="Enter Twitter Handle: @" class="tftextinput" name="q" size="22" maxlength="120"><input type="submit" value="GO!" class="tfbutton">
+							</form>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="loadimage" style="display: none; margin-top: 100px;">	
+			<table>
+				<tr>
+					<td><img src='static/images/post-54213-flapping-Twitter-bird-gif-imgu-UBf6.gif' width=60%></td>
+				</tr>
+				<tr>
+					<td><img src='static/images/loadingpage.gif' width=20%></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>
